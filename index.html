@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cindy Chuong</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial;
+      }
+      
+      body {
+        background: #fff1ff;
+        color: black;
+      }
+      .header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        font-size: 25px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      .navbar a {
+        font-size: 18px;
+        color: #ededed;
+        text-decoration: none;
+        font-weight: 600;
+        margin-left: 35px;
+        transition: .3s;
+      }
+      .navbar a:hover,
+      .navbar a.active{
+        color: #fff1fA;
+      }
+      .home {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+      }
+      
+      .home-content {
+        max-width: 600px;
+      }
+      
+      .home-content h1 {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      
+      .home-content h3 {
+        font-size: 32px;
+        font-weight: 700;
+        color: blue;
+      }
+      .home-content p {
+        font-size: 16px;
+        margin: 20px 0 40px
+      }
+      .home-content .button {
+        display: flex;
+        justify-content: space-between;
+        width: 345px;
+        height: 50px;
+      }
+      .button a{
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        display: inline-flex;
+        width: 150px;
+        height: 100%;
+        background: white;
+        border: 2px solid pink;
+        border-radius: 8px;
+        font-size: 19px;
+        color: #fff1fA;
+        text-decoration: none;
+        font-weight: 900;
+        letter-spacing: 1px;
+        z-index: 1;
+      }
+      .button a:nth-child(2) {
+        background: transparent;
+        color: white
+      }
+      
+      .button a:nth-child(2):hover {
+        color: black;
+      }
+      
+      .button a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background: red;
+        z-index: -1;
+        transition: .5s;
+      }
+      
+      .button a:hover::before {
+        width: 100%;
+      }
+      
+    </style>
+	</head>
+	<body>
+    
+    <header class="header">
+      <a href="" class="logo">CINDY CHUONG</a>
+    
+      <nav class="navbar">
+        <a href="" class="active"> Home </a>
+        <a href=""> About</a>
+        <a href=""> Skills</a>
+        <a href=""> Experience</a>
+        <a href=""> Portfolio</a>
+        <a href=""> Contact</a>
+      </nav>
+    </header>
+		<section class="home">
+    <div class="home-content">
+      <h1>
+        Hello, my name is Cindy
+      </h1>
+      <h3>
+        Design, Business, and Technology
+      </h3>
+      <p>
+        about my paragraph
+      </p>
+      <div class="button">
+        <a href="#"> Resume</a>
+        <a href="#"> Let's Talk</a>
+      </div>
+    </div>
+    
+    </section>
+	</body>
+</html>
+
