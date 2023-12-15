@@ -1,67 +1,95 @@
 <!DOCTYPE html>
-<html lang="en-CA">
+<html lang="en-CAN">
 	<head>
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Cindy Chuong</title>
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Cindy Chuong</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial;
-      }
-      
-      body {
-        background: #fff1ff;
-        color: black;
-      }
-      section {
-        min-height: 100 vh;
-        padding 10rem 9% 2rem;
-      }
-      .header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 20px 10%;
-        background: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .logo {
-        font-size: 25px;
-        color: darkgrey;
-        text-decoration: none;
-        font-weight: 600;
-      }
-      
-      .navbar a {
-        font-size: 18px;
-        color: darkgrey;
-        text-decoration: none;
-        font-weight: 600;
-        margin-left: 35px;
-        transition: .3s;
-      }
-      .navbar a:hover,
-      .navbar a.active{
-        color: lightpink;
-      }
-      .home {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        padding: 0 10%;
-        justify-content: center;
-      }
-      
-      .home-content {
-        max-width: 600px;
-      }
+      /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+/* Body Styling */
+body {
+  background: #fff1ff;
+  color: black;
+}
+
+/* Header Styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 25px;
+  color: darkgrey;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Navbar Styling */
+.navbar ul {
+  list-style: none;
+  font-weight: 600;
+  display: block;
+  float: left;
+  margin-left: 0;
+  justify-content: space-between;
+}
+
+.navbar li {
+  float: left;
+  padding: 20px;
+}
+
+/* Navbar Links Styling */
+.navbar li a {
+  font-size: 18px;
+  color: darkgrey;
+  text-decoration: none;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: lightpink;
+}
+
+/* Home Section Styling */
+.home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  justify-content: center;
+}
+
+.home-content {
+  max-width: 600px;
+}
+
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* ... Continue with other styles ... */
+
       
       .home-content h1 {
         font-size: 56px;
@@ -95,7 +123,7 @@
         border: 2px solid pink;
         border-radius: 8px;
         font-size: 19px;
-        color: #fff1fA;
+        color: #fff1fa;
         text-decoration: none;
         font-weight: 900;
         letter-spacing: 1px;
@@ -129,6 +157,139 @@
       .pfp img{
         border-radius: 30%;
       }
+      
+      .about {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        background: white;
+        padding: 100;
+      }
+      .about-img img{
+        width: 35vw;
+      }
+      
+      .heading {
+        text-align: center;
+        font-size: 4.5rem;
+      }
+      
+      .about-content h2{
+        text-align: left;
+        line-height: 1.2;
+        
+      }
+      
+      .about-content h3{
+        font-size: 2.6rem;
+      }
+      
+      .about-content p{
+        font-size: 1.6rem;
+        margin: 2rem 0 3rem;
+      }
+      
+      .skills h2 {
+        margin-bottom: 5rem;
+      }
+      
+      .skills-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+      .skills-container .skill-box{
+        flex: 1 1 30rem;
+        background: #fff1ff;
+        padding: 3rem 2rem 4rem;
+        border-radius: 2rem;
+        text-align: center;
+        border: .2rem solid blue;
+        transition: .5s ease;
+      }
+      
+      .skills-container .skill-box:hover{
+        border-color: red;
+        transform: scale(1.02);
+      }
+      .skill-box i {
+        font-size: 7rem;
+        color: grey;
+      }
+      .skill-box h3 {
+        font-size: 2.6rem;
+      }
+      
+      .skill-box p{
+        font-size: 1.6rem;
+        margin: 1rem 0 3rem;
+      }
+      div.scroll-container {
+        background-color: #333;
+        overflow: auto;
+        white-space: nowrap;
+        padding: 10px;
+      }
+      div.scroll-container img {
+        padding: 10px;
+        height: 50%;
+      }
+      
+      .contact h2 {
+        margin-bottom: 3rem;
+      }
+      
+      .contact form {
+        max-width: 70rem;
+        margin: 1rem auto;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      .contact form .inputbox {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      
+      .contact form .inputbox input,
+      .contact form textarea {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        color: purple;
+        background: white;
+        border-radius: .8rem;
+        margin: .7rem 0;
+      }
+      
+      .contact form .inputbox input {
+        width: 49%;
+      }
+      .contact form textarea {
+        resize: none;
+      }
+      
+      .contact form .button {
+        margin-top: 2rem;
+        cursor: pointer;
+      }
+      
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 2rem 9%;
+        background: white;
+      }
+      
+      .footer-text p{
+        font-size: 1.6rem;
+        
+      }
     </style>
 	</head>
 	<body>
@@ -137,15 +298,18 @@
       <a href="" class="logo">CINDY CHUONG</a>
     
       <nav class="navbar">
-        <a href="" class="active"> Home </a>
-        <a href=""> About</a>
-        <a href=""> Skills</a>
-        <a href=""> Experience</a>
-        <a href=""> Portfolio</a>
-        <a href=""> Contact</a>
+        <ul>
+          <li> <a href="#home" class="active"> Home </a> </li>
+          <li> <a href="#about"> About</a> </li>
+          <li> <a href="#skills"> Skills</a> </li>
+          <li> <a href="#portfolio"> Portfolio</a> </li>
+          <li> <a href="#contact"> Contact</a> </li>
+        </ul>
       </nav>
     </header>
-		<section class="home">
+    
+    
+		<section class="home" id="home">
     <div class="home-content">
       <h1>
         Hello, my name is Cindy
@@ -165,13 +329,114 @@
       <img src="cindy.jpg" alt="cindy" width="500px">
       </div>
     </section>
+    
+    
     <section class="about" id="about">
-    <div class="pfp">
+    <div class="about-img">
       <img src="cindy.jpg" alt="cindy" width="500px">
       </div>
-      
-    
+    <div class="about-content">
+      <h2 class="heading">
+        About <span> Me </span>
+      </h2>
+      <h3>
+        Developer
+      </h3>
+      <p>
+        I am an undergraduate student studying Global Business and Digital Arts at the University of Waterloo,
+        with hopes of pursing a minor in computing.
+      </p>
+      <a href="#" class="button"> Read more</a>
+      </div>
     </section>
+    
+    <section class="skills">
+      <h2 class="heading">
+        Skills
+      </h2>
+    <div class="skills-container">
+      <div class="skill-box">
+        <i class="bx bx-heart-circle"></i>
+        <h3>
+          Design Skills
+        </h3>
+        <p>
+          Photoshop, Illustrator, Premier Pro, After Effects, In Design, Figma, Canva
+        </p>
+        <a href="#" class="button"> Read more</a>
+      </div>
+      
+      <div class="skill-box">
+        <i class="bx bxs-business"></i>
+        <h3>
+          Business Skills
+        </h3>
+        <p>
+          Skrapp.io, Zoom info, Gmail Mail Merge, G-suite, Microsoft Office.
+        </p>
+        <a href="#" class="button"> Read more</a>
+      </div>
+      
+      <div class="skill-box">
+        <i class="bx bx-expand-horizontal"></i>
+        <h3>
+          Coding Languages
+        </h3>
+        <p>
+          HTML CSS PYTHON JAVASCRIPT
+        </p>
+        <a href="#" class="button"> Read more</a>
+      </div>
+      </div>
+    </section>
+    <h2 class="heading">
+      <span> Projects </span>
+    </h2>
+    <section class="portfolio" id="portfolio">
+    <div class="projects">
+      <div class="projectbox">
+        <h3>
+          Photography
+        </h3>
+        <div class="scroll-container">
+          <img src="action shot.png" alt="Forest">
+          <img src="animal shot.png" alt="Northern Lights">
+          <img src="landscape shot.png" alt="Mountains">
+          <img src="macro shot.png" alt="Forest">
+          <img src="product shot.png" alt="Northern Lights">
+          <img src="portrait shot.png" alt="Mountains">
+        </div>
+      </div>
+      </div>
+    </section>
+    
+    <section class="contact" id="contact">
+    <h2 class="heading">
+      Contact <span> Me!</span>
+      </h2>
+      
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name">
+          <input type="email" placeholder="Email Address">
+        </div>
+        <div class="input-box">
+          <input type="number" placeholder="Mobile Number">
+          <input type="text" placeholder="Email Subject">
+        </div>
+        <textarea name="" cols="30" rows="10" placeholder="Your Message"> </textarea>
+          <input type="submit" value="Send Message" class="button">
+      </form>
+    </section>
+    <footer class="footer">
+    <div class="footer-text">
+      <p>
+        Copyright &copy; 2023 CINDY NGUYEN CHUONG | All Rights Reserved.
+        
+      </p>
+      </div>
+         
+    </footer>
 	</body>
 </html>
 
