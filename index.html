@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <title>Cindy Chuong</title>
     <style>
-      /* General Reset */
       * {
         margin: 0;
         padding: 0;
@@ -118,8 +117,8 @@
         text-decoration: none;
         transition: .3s;
       }
-      
-      .navbar i{
+
+      .navbar i {
         font-size: 30px
       }
 
@@ -176,7 +175,6 @@
         gap: 20px;
         background: #FFF9FF;
         padding: 80px;
-        /* Make sure to add a unit (e.g., px) */
       }
 
       .about-img img {
@@ -255,12 +253,12 @@
         background: #fff9ff;
         padding: 50px;
       }
-      
-      .portfolio h2{
+
+      .portfolio h2 {
         font-size: 56px;
       }
-      
-      .portfolio h3{
+
+      .portfolio h3 {
         font-size: 24px;
         padding: 10px;
       }
@@ -277,75 +275,70 @@
         display: flex;
         overflow-x: auto;
         gap: 10px;
-        /* Adjust gap between images as needed */
       }
 
       .scroll-container img {
         padding: 5px;
         height: 200px;
-        /* Set a fixed height for the images */
         width: auto;
       }
+      
+      
+      .contact {
+        padding: 50px;
+        text-align: center;
+      }
 
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+      }
 
-      /* Contact Section Styling */
-      /* Contact Section Styling */
-.contact {
-  padding: 50px;
-  text-align: center;
-}
+      .input-box {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
 
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
+      .contact form input,
+      .contact form textarea {
+        width: 48%;
+        padding: 15px;
+        font-size: 16px;
+        color: #333;
+        background: #fff;
+        border: 2px solid pink;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
 
-.input-box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+      .contact form textarea {
+        width: 100%;
+        resize: none;
+      }
 
-.contact form input,
-.contact form textarea {
-  width: 48%;
-  padding: 15px;
-  font-size: 16px;
-  color: #333;
-  background: #fff;
-  border: 2px solid pink;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-sizing: border-box;
-}
+      .contact form .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        color: #fff;
+        background: pink;
+        border: 2px solid pink;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+      }
 
-.contact form textarea {
-  width: 100%;
-  resize: none;
-}
+      .contact form .button:hover {
+        background: #fff;
+        color: pink;
+      }
 
-.contact form .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 15px;
-  font-size: 18px;
-  color: #fff;
-  background: pink;
-  border: 2px solid pink;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s, color 0.3s;
-}
-
-.contact form .button:hover {
-  background: #fff;
-  color: pink;
-}
-
-      /* Footer Section Styling */
       .footer {
         display: flex;
         justify-content: center;
@@ -361,7 +354,6 @@
     </style>
   </head>
   <body>
-
     <header class="header">
       <a href="" class="logo">CINDY CHUONG</a>
 
@@ -396,7 +388,7 @@
         </div>
       </div>
       <div class="pfp">
-        <img src="me.jpg" alt="me" width="300px" height>
+        <img src="me.jpg" alt="me" width="300px" height=>
       </div>
     </section>
 
@@ -411,7 +403,7 @@
         </h2>
         <p>
           I am orginally from Mississauga, Ontario, Canada. My nationality is Vietnamese and Chinese.
-          Growing up, I play volleyball and competed in all-star cheerleading. My current passion includes fashion, beauty and social media :) 
+          Growing up, I play volleyball and competed in all-star cheerleading. My current passion includes fashion, beauty and social media :)
         </p>
       </div>
     </section>
@@ -475,21 +467,21 @@
     </section>
 
     <section class="contact" id="contact">
-  <h2 class="heading">Contact <span>Me!</span></h2>
+      <h2 class="heading">Contact <span>Me!</span></h2>
 
-  <form action="#" class="contact-form">
-    <div class="input-box">
-      <input type="text" placeholder="Full Name" class="form-input">
-      <input type="email" placeholder="Email Address" class="form-input">
-    </div>
-    <div class="input-box">
-      <input type="tel" placeholder="Mobile Number" class="form-input">
-      <input type="text" placeholder="Email Subject" class="form-input">
-    </div>
-    <textarea name="message" cols="30" rows="10" placeholder="Your Message" class="form-input"></textarea>
-    <input type="submit" value="Send Message" class="button">
-  </form>
-</section>
+      <form action="#" class="contact-form">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" class="form-input">
+          <input type="email" placeholder="Email Address" class="form-input">
+        </div>
+        <div class="input-box">
+          <input type="tel" placeholder="Mobile Number" class="form-input">
+          <input type="text" placeholder="Email Subject" class="form-input">
+        </div>
+        <textarea name="message" cols="30" rows="10" placeholder="Your Message" class="form-input"></textarea>
+        <input type="submit" value="Send Message" class="button">
+      </form>
+    </section>
     <footer class="footer">
       <div class="footer-text">
         <p>
