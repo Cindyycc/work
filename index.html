@@ -16,13 +16,12 @@
         font-family: poppins;
       }
 
-      /* Body Styling */
       body {
+        margin: 0;
         background: #fff1ff;
         color: black;
       }
 
-      /* Header Styling */
       .header {
         position: fixed;
         top: 0;
@@ -35,14 +34,14 @@
         align-items: center;
       }
 
-      /* Logo Styling */
+
       .logo {
         font-size: 25px;
         color: lightpink;
         text-decoration: none;
       }
 
-      /* Button Styling */
+
       .button {
         display: flex;
         justify-content: space-between;
@@ -96,7 +95,7 @@
         width: 100%;
       }
 
-      /* Navbar Styling */
+
       .navbar ul {
         list-style: none;
         display: block;
@@ -110,7 +109,7 @@
         padding: 10px;
       }
 
-      /* Navbar Links Styling */
+
       .navbar li a {
         font-size: 18px;
         color: darkgrey;
@@ -126,7 +125,7 @@
         color: lightpink;
       }
 
-      /* Home Section Styling */
+
       .home {
         height: 100vh;
         display: flex;
@@ -167,7 +166,7 @@
         transition: .3s;
       }
 
-      /* About Section Styling */
+
       .about {
         display: flex;
         justify-content: center;
@@ -204,7 +203,34 @@
         font-size: 16px;
       }
 
-      /* Skills Section Styling */
+      .about-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      .about-content th,
+      .about-content td {
+        border: 2px solid lightpink;
+        padding: 10px;
+        text-align: left;
+      }
+
+      .about-content th {
+        background-color: pink;
+        color: white;
+      }
+
+      .about-content tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .about-content tbody tr:hover {
+        background-color: #ffe4e1;
+      }
+
+
+
       .skills h2 {
         padding-top: 40px;
         font-size: 56px;
@@ -222,7 +248,7 @@
         background: #fff1ff;
         border-radius: 10px;
         text-align: center;
-        border: .2rem solid lightpink;
+        border: 3px solid lightpink;
         transition: .5s ease;
         width: 350px;
         height: 250px;
@@ -248,7 +274,7 @@
         margin: 10px;
       }
 
-      /* Portfolio Section Styling */
+
       .portfolio {
         background: #fff9ff;
         padding: 50px;
@@ -271,7 +297,10 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
-      .scroll-container {
+      < !-- Code copied from: https: //www.w3schools.com/howto/howto_css_image_gallery_scroll.asp
+
+      Author: w3schools.com Name: Image Gallery With Horizontal Scroll Description: Use the horizontal scrollbar to see the other images Date retrieved: Dec. 5,
+      2023 -->< !-- Copied code starts -->.scroll-container {
         display: flex;
         overflow-x: auto;
         gap: 10px;
@@ -282,9 +311,8 @@
         height: 200px;
         width: auto;
       }
-      
-      
-      .contact {
+
+      < !-- Copied code ends -->.contact {
         padding: 50px;
         text-align: center;
       }
@@ -405,6 +433,28 @@
           I am orginally from Mississauga, Ontario, Canada. My nationality is Vietnamese and Chinese.
           Growing up, I play volleyball and competed in all-star cheerleading. My current passion includes fashion, beauty and social media :)
         </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Nationality</td>
+              <td>Vietnamese and Chinese</td>
+            </tr>
+            <tr>
+              <td>Location</td>
+              <td>Mississauga, Ontario, Canada</td>
+            </tr>
+            <tr>
+              <td>Hobbies</td>
+              <td>Volleyball, Cheerleading, Fashion, Beauty, Social Media</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -439,7 +489,7 @@
             Coding Languages
           </h3>
           <p>
-            HTML CSS PYTHON JAVASCRIPT
+            HTML, CSS, PYTHON, JAVASCRIPT
           </p>
         </div>
       </div>
@@ -455,12 +505,22 @@
             Photography
           </h3>
           <div class="scroll-container">
-            <img src="action shot.png" alt="Forest">
-            <img src="animal shot.png" alt="Northern Lights">
-            <img src="landscape shot.png" alt="Mountains">
-            <img src="macro shot.png" alt="Forest">
-            <img src="product shot.png" alt="Northern Lights">
-            <img src="portrait shot.png" alt="Mountains">
+            <img src="action shot.png" alt="action" width="30px" height="20px">
+            <img src="animal shot.png" alt="animal" width="30px" height="20px">
+            <img src="landscape shot.png" alt="landscape" width="30px" height="20px">
+            <img src="macro shot.png" alt="macro" width="30px" height="20px">
+            <img src="product shot.png" alt="product" width="30px" height="20px">
+            <img src="portrait shot.png" alt="portrait" width="20px" height="30px">
+          </div>
+        </div>
+        <div class="projectbox">
+          <h3>
+            Podcast Work
+          </h3>
+          <div class="scroll-container">
+            <a href="https://lnkd.in/g-Vk4fqd"> <img src="gbdaonaire1.png" alt="gbdaonairep1" width="40px" height="30px"> </a>
+            <a href="https://lnkd.in/gYMPPAqD"> <img src="gbdaonairep2.png" alt="gbdaonairep2" width="40px" height="30px"> </a>
+            <a href="https://lnkd.in/dcDwJTxJ"> <img src="gbdaonairep3.png" alt="gbdaonairep3" width="40px" height="30px"> </a>
           </div>
         </div>
       </div>
@@ -486,10 +546,8 @@
       <div class="footer-text">
         <p>
           Copyright &copy; 2023 CINDY NGUYEN CHUONG | All Rights Reserved.
-
         </p>
       </div>
-
     </footer>
   </body>
 </html>
