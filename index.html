@@ -13,7 +13,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: poppins;
+        font-family: Poppins;
       }
 
       body {
@@ -32,6 +32,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        z-index: 1000;
       }
 
 
@@ -41,6 +42,96 @@
         text-decoration: none;
       }
 
+      .navbar {
+        display: flex;
+        align-items: center;
+      }
+
+      .navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .navbar li {
+        padding: 10px;
+      }
+
+      .navbar li a {
+        font-size: 18px;
+        color: darkgrey;
+        text-decoration: none;
+        transition: .3s;
+      }
+
+      .navbar i {
+        font-size: 30px;
+        color: grey;
+      }
+
+      .navbar li a:visited {
+        color: darkgrey;
+      }
+
+      .navbar li a:hover {
+        color: lightpink;
+      }
+
+      .navbar li a:active {
+        color: lightpink;
+      }
+
+      .navbar i {
+        font-size: 30px;
+        color: grey;
+      }
+
+      .navbar a:hover i {
+        color: lightpink;
+      }
+
+
+      .home {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+        justify-content: center;
+      }
+
+      .home-content {
+        max-width: 600px;
+      }
+
+      .home-content h1 {
+        font-size: 56px;
+        line-height: 1.2;
+      }
+
+      .home-content h3 {
+        font-size: 24px;
+        margin-top: 8px;
+        color: pink;
+      }
+
+      .home-content p {
+        font-size: 16px;
+        padding: 0px;
+        margin: 10px 0 30px;
+        margin-right: 80px;
+      }
+
+      .pfp img {
+        border-radius: 30%;
+
+      }
+
+      .pfp img:hover {
+        box-shadow: 10px 10px 20px 20px white;
+        transition: .3s;
+      }
 
       .button {
         display: flex;
@@ -93,98 +184,6 @@
 
       .button a:hover::before {
         width: 100%;
-      }
-
-
-      .navbar ul {
-        list-style: none;
-        display: block;
-        float: left;
-        margin-left: 0;
-        justify-content: space-between;
-      }
-
-      .navbar li {
-        float: left;
-        padding: 10px;
-      }
-
-
-      .navbar li a {
-        font-size: 18px;
-        color: darkgrey;
-        text-decoration: none;
-        transition: .3s;
-      }
-
-      .navbar i {
-        font-size: 30px
-      }
-
-      .navbar li a:visited {
-    color: darkgrey;
-}
-
-/* Hover effect for links */
-.navbar li a:hover {
-    color: lightpink;
-}
-
-/* Active link style (current page) */
-.navbar li a:active {
-    color: lightpink;
-}
-
-/* Styling for your social media icons */
-.navbar i {
-    font-size: 30px;
-    color: grey;
-}
-
-/* Hover effect for social media icons */
-.navbar a:hover i {
-    color: lightpink;
-}
-
-
-      .home {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        padding: 0 10%;
-        justify-content: center;
-      }
-
-      .home-content {
-        max-width: 600px;
-      }
-
-      .home-content h1 {
-        font-size: 56px;
-        line-height: 1.2;
-      }
-
-      .home-content h3 {
-        font-size: 24px;
-        margin-top: 8px;
-        color: pink;
-      }
-
-      .home-content p {
-        font-size: 16px;
-        padding: 0px;
-        margin: 10px 0 30px;
-        margin-right: 80px;
-      }
-
-      .pfp img {
-        border-radius: 30%;
-
-      }
-
-      .pfp img:hover {
-        box-shadow: 10px 10px 20px 20px white;
-        transition: .3s;
       }
 
 
@@ -317,7 +316,7 @@
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
-      
+
       .scroll-container {
         display: flex;
         overflow-x: auto;
@@ -329,7 +328,7 @@
         height: 200px;
         width: auto;
       }
-      
+
       .contact {
         padding: 50px;
         text-align: center;
@@ -410,7 +409,7 @@
           <li> <a href="#skills"> Skills</a> </li>
           <li> <a href="#portfolio"> Portfolio</a> </li>
           <li> <a href="#contact"> Contact</a> </li>
-          <li> <a href="https://ca.linkedin.com/in/cindy-chuong-33083326b"> <i class="bx bxl-linkedin-square"> </i> </a></li> 
+          <li> <a href="https://ca.linkedin.com/in/cindy-chuong-33083326b"> <i class="bx bxl-linkedin-square"> </i> </a></li>
           <li> <a href="mailto:cnchuong@uwaterloo.ca"> <i class="bx bxs-envelope"></i></a></li>
         </ul>
       </nav>
@@ -536,9 +535,9 @@
             Podcast Work
           </h3>
           <div class="scroll-container">
-            <a href="https://lnkd.in/g-Vk4fqd"> <img src="gbdaonaire1.png" alt="gbdaonairep1" </a> </a> 
-            <a href="https://lnkd.in/gYMPPAqD"> <img src="gbdaonairep2.png" alt="gbdaonairep2"</a> </a>
-            <a href="https://lnkd.in/dcDwJTxJ"> <img src="gbdaonairep3.png" alt="gbdaonairep3"</a> </a>
+            <a href="https://lnkd.in/g-Vk4fqd"> <img src="gbdaonaire1.png" alt="gbdaonairep1" </a> </a>
+            <a href="https://lnkd.in/gYMPPAqD"> <img src="gbdaonairep2.png" alt="gbdaonairep2" </a> </a>
+            <a href="https://lnkd.in/dcDwJTxJ"> <img src="gbdaonairep3.png" alt="gbdaonairep3" </a> </a>
           </div>
         </div>
       </div>
