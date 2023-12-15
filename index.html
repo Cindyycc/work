@@ -1,143 +1,75 @@
 <!DOCTYPE html>
 <html lang="en-CAN">
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <title>Cindy Chuong</title>
     <style>
       /* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial;
-}
-
-/* Body Styling */
-body {
-  background: #fff1ff;
-  color: black;
-}
-
-/* Header Styling */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 10%;
-  background: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Logo Styling */
-.logo {
-  font-size: 25px;
-  color: darkgrey;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-/* Navbar Styling */
-.navbar ul {
-  list-style: none;
-  font-weight: 600;
-  display: block;
-  float: left;
-  margin-left: 0;
-  justify-content: space-between;
-}
-
-.navbar li {
-  float: left;
-  padding: 20px;
-}
-
-/* Navbar Links Styling */
-.navbar li a {
-  font-size: 18px;
-  color: darkgrey;
-  text-decoration: none;
-  transition: .3s;
-}
-
-.navbar a:hover,
-.navbar a.active {
-  color: lightpink;
-}
-
-/* Home Section Styling */
-.home {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 10%;
-  justify-content: center;
-}
-
-.home-content {
-  max-width: 600px;
-}
-
-.home-content h1 {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-/* ... Continue with other styles ... */
-
-      
-      .home-content h1 {
-        font-size: 56px;
-        font-weight: 700;
-        line-height: 1.2;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: poppins;
       }
-      
-      .home-content h3 {
-        font-size: 32px;
-        font-weight: 700;
-        color: pink;
+
+      /* Body Styling */
+      body {
+        background: #fff1ff;
+        color: black;
       }
-      .home-content p {
-        font-size: 16px;
-        margin: 20px 0 40px
+
+      /* Header Styling */
+      .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
-      .home-content .button {
+
+      /* Logo Styling */
+      .logo {
+        font-size: 25px;
+        color: lightpink;
+        text-decoration: none;
+      }
+
+      /* Button Styling */
+      .button {
         display: flex;
         justify-content: space-between;
         width: 345px;
         height: 50px;
       }
-      .button a{
+
+      .button a {
         position: relative;
+        display: inline-flex;
         justify-content: center;
         align-items: center;
-        display: inline-flex;
         width: 150px;
         height: 100%;
         background: white;
         border: 2px solid pink;
         border-radius: 8px;
         font-size: 19px;
-        color: #fff1fa;
+        color: pink;
         text-decoration: none;
         font-weight: 900;
         letter-spacing: 1px;
         z-index: 1;
+        transition: background 0.3s, color 0.3s;
       }
-      .button a:nth-child(2) {
-        background: transparent;
-        color: white
-      }
-      
-      .button a:nth-child(2):hover {
-        color: black;
-      }
-      
+
       .button a::before {
         content: "";
         position: absolute;
@@ -145,115 +77,223 @@ body {
         left: 0;
         width: 0%;
         height: 100%;
-        background: red;
+        background: pink;
         z-index: -1;
-        transition: .5s;
+        transition: width 0.5s;
       }
-      
+
+      .button a:nth-child(2) {
+        background: transparent;
+        color: pink;
+      }
+
+      .button a:hover {
+        background: pink;
+        color: white;
+      }
+
+
       .button a:hover::before {
         width: 100%;
       }
-      
-      .pfp img{
-        border-radius: 30%;
+
+      /* Navbar Styling */
+      .navbar ul {
+        list-style: none;
+        display: block;
+        float: left;
+        margin-left: 0;
+        justify-content: space-between;
       }
-      
+
+      .navbar li {
+        float: left;
+        padding: 10;
+      }
+
+      /* Navbar Links Styling */
+      .navbar li a {
+        font-size: 18px;
+        color: darkgrey;
+        text-decoration: none;
+        transition: .3s;
+      }
+
+      .navbar a:hover {
+        color: lightpink;
+      }
+
+      /* Home Section Styling */
+      .home {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 10%;
+        justify-content: center;
+      }
+
+      .home-content {
+        max-width: 600px;
+      }
+
+      .home-content h1 {
+        font-size: 56px;
+        line-height: 1.2;
+      }
+
+      .home-content h3 {
+        font-size: 24px;
+        margin-top: 8px;
+        color: pink;
+      }
+
+      .home-content p {
+        font-size: 16px;
+        padding: 0px;
+        margin: 10px 0 30px;
+        margin-right: 80px;
+      }
+
+      .pfp img {
+        border-radius: 30%;
+
+      }
+
+      .pfp img:hover {
+        box-shadow: 10px 10px 20px 20px white;
+        transition: .3s;
+      }
+
+      /* About Section Styling */
       .about {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
-        background: white;
-        padding: 100;
+        gap: 20px;
+        background: #FFF9FF;
+        padding: 80px;
+        /* Make sure to add a unit (e.g., px) */
       }
-      .about-img img{
-        width: 35vw;
+
+      .about-img img {
+        width: 300px;
+        border-radius: 20%;
       }
-      
+
       .heading {
         text-align: center;
         font-size: 4.5rem;
       }
-      
-      .about-content h2{
+
+      .about-content h2 {
         text-align: left;
         line-height: 1.2;
-        
+        font-size: 56px;
+        margin-left: 20px;
       }
-      
-      .about-content h3{
-        font-size: 2.6rem;
+
+      .about-content h3 {
+        margin-left: 20px;
+        font-size: 24px;
       }
-      
-      .about-content p{
-        font-size: 1.6rem;
-        margin: 2rem 0 3rem;
+
+      .about-content p {
+        margin-left: 20px;
+        font-size: 16px;
       }
-      
+
+      /* Skills Section Styling */
       .skills h2 {
-        margin-bottom: 5rem;
+        padding: 20px;
+        font-size: 56px;
       }
-      
+
       .skills-container {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 2rem;
+        padding: 10px;
       }
-      .skills-container .skill-box{
-        flex: 1 1 30rem;
+
+      .skills-container .skill-box {
         background: #fff1ff;
-        padding: 3rem 2rem 4rem;
-        border-radius: 2rem;
+        border-radius: 10px;
         text-align: center;
-        border: .2rem solid blue;
+        border: .2rem solid lightpink;
         transition: .5s ease;
+        width: 350px;
+        height: 250px;
+        margin: 10px;
       }
-      
-      .skills-container .skill-box:hover{
-        border-color: red;
+
+      .skills-container .skill-box:hover {
         transform: scale(1.02);
       }
+
       .skill-box i {
-        font-size: 7rem;
+        font-size: 80px;
         color: grey;
+        margin-top: 25px;
       }
+
       .skill-box h3 {
-        font-size: 2.6rem;
+        font-size: 24px;
       }
-      
-      .skill-box p{
-        font-size: 1.6rem;
-        margin: 1rem 0 3rem;
+
+      .skill-box p {
+        font-size: 16px;
+        margin: 10px;
       }
-      div.scroll-container {
-        background-color: #333;
-        overflow: auto;
-        white-space: nowrap;
-        padding: 10px;
+
+      /* Portfolio Section Styling */
+      .portfolio {
+        background: #fff9ff;
+        padding: 50px;
+        /* Adjust padding as needed */
       }
-      div.scroll-container img {
-        padding: 10px;
-        height: 50%;
+
+      .projectbox {
+        background: white;
+        margin: 30px;
+        border-radius: 1.5rem;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
-      
+
+      .scroll-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        /* Adjust gap between images as needed */
+      }
+
+      .scroll-container img {
+        padding: 5px;
+        height: 150px;
+        /* Set a fixed height for the images */
+        width: auto;
+      }
+
+
+      /* Contact Section Styling */
       .contact h2 {
         margin-bottom: 3rem;
       }
-      
+
       .contact form {
         max-width: 70rem;
         margin: 1rem auto;
         text-align: center;
         margin-bottom: 3rem;
       }
+
       .contact form .inputbox {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
       }
-      
+
       .contact form .inputbox input,
       .contact form textarea {
         width: 100%;
@@ -264,19 +304,21 @@ body {
         border-radius: .8rem;
         margin: .7rem 0;
       }
-      
+
       .contact form .inputbox input {
         width: 49%;
       }
+
       .contact form textarea {
         resize: none;
       }
-      
+
       .contact form .button {
         margin-top: 2rem;
         cursor: pointer;
       }
-      
+
+      /* Footer Section Styling */
       .footer {
         display: flex;
         justify-content: space-between;
@@ -285,18 +327,17 @@ body {
         padding: 2rem 9%;
         background: white;
       }
-      
-      .footer-text p{
+
+      .footer-text p {
         font-size: 1.6rem;
-        
       }
     </style>
-	</head>
-	<body>
-    
+  </head>
+  <body>
+
     <header class="header">
       <a href="" class="logo">CINDY CHUONG</a>
-    
+
       <nav class="navbar">
         <ul>
           <li> <a href="#home" class="active"> Home </a> </li>
@@ -307,114 +348,111 @@ body {
         </ul>
       </nav>
     </header>
-    
-    
-		<section class="home" id="home">
-    <div class="home-content">
-      <h1>
-        Hello, my name is Cindy
-      </h1>
-      <h3>
-        Design, Business, and Technology
-      </h3>
-      <p>
-        about my paragraph
-      </p>
-      <div class="button">
-        <a href="#"> Resume</a>
-        <a href="#"> Let's Talk</a>
+
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>
+          Hello, my name is Cindy
+        </h1>
+        <h3>
+          Design, Business, and Technology
+        </h3>
+        <p>
+          An undergraduate student studying Global Business and Digital Arts at the University of Waterloo,
+          with hopes of pursing a minor in computing.
+        </p>
+        <div class="button">
+          <a href="#"> Resume</a>
+          <a href="#"> Let's Talk</a>
+        </div>
       </div>
-    </div>
-    <div class="pfp">
-      <img src="cindy.jpg" alt="cindy" width="500px">
+      <div class="pfp">
+        <img src="me.jpg" alt="me" width="300px" height>
       </div>
     </section>
-    
-    
+
+
     <section class="about" id="about">
-    <div class="about-img">
-      <img src="cindy.jpg" alt="cindy" width="500px">
+      <div class="about-img">
+        <img src="cindy.jpg" alt="cindy" width="500px">
       </div>
-    <div class="about-content">
-      <h2 class="heading">
-        About <span> Me </span>
-      </h2>
-      <h3>
-        Developer
-      </h3>
-      <p>
-        I am an undergraduate student studying Global Business and Digital Arts at the University of Waterloo,
-        with hopes of pursing a minor in computing.
-      </p>
-      <a href="#" class="button"> Read more</a>
+      <div class="about-content">
+        <h2 class="heading">
+          About <span> Me </span>
+        </h2>
+        <h3>
+          Developer
+        </h3>
+        <p>
+          I am an undergraduate student studying Global Business and Digital Arts at the University of Waterloo,
+          with hopes of pursing a minor in computing.
+        </p>
       </div>
     </section>
-    
+
     <section class="skills">
       <h2 class="heading">
         Skills
       </h2>
-    <div class="skills-container">
-      <div class="skill-box">
-        <i class="bx bx-heart-circle"></i>
-        <h3>
-          Design Skills
-        </h3>
-        <p>
-          Photoshop, Illustrator, Premier Pro, After Effects, In Design, Figma, Canva
-        </p>
-        <a href="#" class="button"> Read more</a>
-      </div>
-      
-      <div class="skill-box">
-        <i class="bx bxs-business"></i>
-        <h3>
-          Business Skills
-        </h3>
-        <p>
-          Skrapp.io, Zoom info, Gmail Mail Merge, G-suite, Microsoft Office.
-        </p>
-        <a href="#" class="button"> Read more</a>
-      </div>
-      
-      <div class="skill-box">
-        <i class="bx bx-expand-horizontal"></i>
-        <h3>
-          Coding Languages
-        </h3>
-        <p>
-          HTML CSS PYTHON JAVASCRIPT
-        </p>
-        <a href="#" class="button"> Read more</a>
-      </div>
-      </div>
-    </section>
-    <h2 class="heading">
-      <span> Projects </span>
-    </h2>
-    <section class="portfolio" id="portfolio">
-    <div class="projects">
-      <div class="projectbox">
-        <h3>
-          Photography
-        </h3>
-        <div class="scroll-container">
-          <img src="action shot.png" alt="Forest">
-          <img src="animal shot.png" alt="Northern Lights">
-          <img src="landscape shot.png" alt="Mountains">
-          <img src="macro shot.png" alt="Forest">
-          <img src="product shot.png" alt="Northern Lights">
-          <img src="portrait shot.png" alt="Mountains">
+      <div class="skills-container">
+        <div class="skill-box">
+          <i class="bx bx-heart-circle"></i>
+          <h3>
+            Design Skills
+          </h3>
+          <p>
+            Photoshop, Illustrator, Premier Pro, After Effects, In Design, Figma, Canva
+          </p>
+        </div>
+
+        <div class="skill-box">
+          <i class="bx bxs-business"></i>
+          <h3>
+            Business Skills
+          </h3>
+          <p>
+            Skrapp.io, Zoom info, Gmail Mail Merge, G-suite, Microsoft Office.
+          </p>
+        </div>
+
+        <div class="skill-box">
+          <i class="bx bx-expand-horizontal"></i>
+          <h3>
+            Coding Languages
+          </h3>
+          <p>
+            HTML CSS PYTHON JAVASCRIPT
+          </p>
         </div>
       </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <h2 class="heading">
+        Projects
+      </h2>
+      <div class="projects">
+        <div class="projectbox">
+          <h3>
+            Photography
+          </h3>
+          <div class="scroll-container">
+            <img src="action shot.png" alt="Forest">
+            <img src="animal shot.png" alt="Northern Lights">
+            <img src="landscape shot.png" alt="Mountains">
+            <img src="macro shot.png" alt="Forest">
+            <img src="product shot.png" alt="Northern Lights">
+            <img src="portrait shot.png" alt="Mountains">
+          </div>
+        </div>
       </div>
     </section>
-    
+
     <section class="contact" id="contact">
-    <h2 class="heading">
-      Contact <span> Me!</span>
+      <h2 class="heading">
+        Contact <span> Me!</span>
       </h2>
-      
+
       <form action="#">
         <div class="input-box">
           <input type="text" placeholder="Full Name">
@@ -425,18 +463,17 @@ body {
           <input type="text" placeholder="Email Subject">
         </div>
         <textarea name="" cols="30" rows="10" placeholder="Your Message"> </textarea>
-          <input type="submit" value="Send Message" class="button">
+        <input type="submit" value="Send Message" class="button">
       </form>
     </section>
     <footer class="footer">
-    <div class="footer-text">
-      <p>
-        Copyright &copy; 2023 CINDY NGUYEN CHUONG | All Rights Reserved.
-        
-      </p>
-      </div>
-         
-    </footer>
-	</body>
-</html>
+      <div class="footer-text">
+        <p>
+          Copyright &copy; 2023 CINDY NGUYEN CHUONG | All Rights Reserved.
 
+        </p>
+      </div>
+
+    </footer>
+  </body>
+</html>
